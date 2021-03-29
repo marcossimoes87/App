@@ -1,3 +1,0 @@
-Scaffold-DbContext "Server=segurodes.database.windows.net;Database=segurodes;User Id=desenvolvedor;Password=Xbox>Ps5;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context ContextDB
-
-dotnet ef dbcontext scaffold "Server=segurodes.database.windows.net;Database=segurodes;User Id=desenvolvedor;Password=Xbox>Ps5;" Microsoft.EntityFrameworkCore.SqlServer -o Models --context ContextDB -f
