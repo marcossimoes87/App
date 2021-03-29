@@ -1,0 +1,1197 @@
+{
+	"info": {
+		"_postman_id": "88b24b45-cd60-4def-b280-79176c86ab18",
+		"name": "SeguroDPVAT",
+		"description": "Colecao para sistema dpvat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Participante",
+			"item": [
+				{
+					"name": "1 - Valida Pessoa",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Cpf\": 2086630964,\n    \"Nome\": \"Testador da Silva\",\n    \"DataNascimento\": \"1990-11-10\",\n    \"Genero\": \"M\",\n    \"NomeMae\": \"Mae do Testador\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URLDPVAT}}/api/participante/v1/validapessoa",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"participante",
+								"v1",
+								"validapessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - Grau Parentesco",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/participante/v1/grauparentesco",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"participante",
+								"v1",
+								"grauparentesco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - Lista Estado Civil",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/participante/v1/estadocivil",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"participante",
+								"v1",
+								"estadocivil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4 - Lista Ocupacoes",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/participante/v1/ocupacao/F",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"participante",
+								"v1",
+								"ocupacao",
+								"F"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidade",
+			"item": [
+				{
+					"name": "1 - Lista UF",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/localidade/v1/uf",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"localidade",
+								"v1",
+								"uf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - Lista Municipio",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/localidade/v1/municipio/GO",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"localidade",
+								"v1",
+								"municipio",
+								"GO"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - Nacionalidade",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/localidade/v1/nacionalidade",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"localidade",
+								"v1",
+								"nacionalidade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seguro",
+			"item": [
+				{
+					"name": "1 - Ultimo historico CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/historico/v1/02086630964",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"historico",
+								"v1",
+								"02086630964"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - Tipo Beneficiario",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/segurocaixa/v1/tipobeneficiario/1",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"segurocaixa",
+								"v1",
+								"tipobeneficiario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - Tipo de pedido (beneficio)",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/segurocaixa/v1/tipopedidoindenizacao",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"segurocaixa",
+								"v1",
+								"tipopedidoindenizacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4 - Tipo de Veiculo",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/segurocaixa/v1/TipoVeiculoAcidente",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"segurocaixa",
+								"v1",
+								"TipoVeiculoAcidente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7 - Tipo Veiculo Patrimonio",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URLDPVAT}}/api/segurocaixa/v1/tipoveiculopatrimonio",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"segurocaixa",
+								"v1",
+								"tipoveiculopatrimonio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5 - Envio Processo",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"IdTipoPedido\": 4,\n    \"IdTipoParticipacao\": 1,\n    \"IdTipoVeiculo\": 1,\n    \"DadosAcidente\": {\n        \"DataHoraAcidente\": \"2021-01-01\",\n        \"TipoLogradouro\": \"R\",\n        \"Logradouro\": \"Baker\",\n        \"Numero\": \"321 B\",\n        \"Municipio\": 5527,\n        \"Complemento\": \"Comp\",\n        \"Bairro\": \"Bairr\"\n    },\n    \"DadosPessoa\": {\n        \"IdPessoa\": 1,\n        \"TipoLogradouro\": \"R\",\n        \"Logradouro\": \"Baker\",\n        \"Numero\": \"321 B\",\n        \"Municipio\": 5527,\n        \"Complemento\": \"Comp\",\n        \"Bairro\": \"Bairr\",\n        \"IdNacionalidade\": 44,\n        \"IdOcupacao\": 2,\n        \"Renda\": 1500,\n        \"DataRenda\": \"2010-01-01\",\n        \"Patrimonio\": 100000,\n        \"IdVeiculoPatrimonio\": 1,\n        \"AnoFabricacaoVeiculoPatrimonio\": 2010,\n        \"AnoModeloVeiculoPatrimonio\": 2011,\n        \"Nif\": null,\n        \"IdParentescoVitima\": 1,\n        \"CpfVitima\": 3614364160,\n        \"IdEstadoCivilVitima\": null,\n        \"CpfCompanheiroVitima\": null,\n        \"PossuiNascituro\": false,\n        \"QtdFilhosFalescidos\": 0,\n        \"QtdIrmaosFalescidos\": 0\n    },\n    \"DadosDependentes\": [\n        {\n            \"IdParentesco\": 1,\n            \"CpfParente\": null\n        },\n        {\n            \"IdParentesco\": 1,\n            \"CpfParente\": 3614364160\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URLDPVAT}}/api/segurocaixa/v1/envioprocesso",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"segurocaixa",
+								"v1",
+								"envioprocesso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6 - Consulta Processo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URLDPVAT}}/api/segurocaixa/v1/1",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"segurocaixa",
+								"v1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Documento",
+			"item": [
+				{
+					"name": "1 - Lista de Documentos Solicitados",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "state",
+									"value": "{{STATE}}",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "{{SCOPE}}",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{CALL_BACK_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{CLIENT_ID}}",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{AUTH_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{ACCESS_TOKEN_URL}}",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"IdTipoPedido\": 1,\n    \"IdTipoParticipacao\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URLDPVAT}}/api/segurocaixa/v1/listadocumentos",
+							"host": [
+								"{{URLDPVAT}}"
+							],
+							"path": [
+								"api",
+								"segurocaixa",
+								"v1",
+								"listadocumentos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "state",
+				"value": "{{STATE}}",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "{{SCOPE}}",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "{{CALL_BACK_URL}}",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{CLIENT_ID}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{AUTH_URL}}",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{ACCESS_TOKEN_URL}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	}
+}
